@@ -126,7 +126,7 @@ class DumpData:
                 self.data_set["시장구분"][stock].apply(lambda x: 1 if x == "KSE" else 0)
             )
 
-            tr_date = list(map(lambda x: x.replace("-", ""), self.self.k_dates))
+            tr_date = list(map(lambda x: x.replace("-", ""), self.k_dates))
             dump_data = pd.DataFrame(
                 {
                     "STOCK_CODE": [stock for _ in range(len(tr_date))],

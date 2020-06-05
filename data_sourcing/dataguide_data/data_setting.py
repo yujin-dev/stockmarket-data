@@ -116,6 +116,9 @@ class SortStockData:
             elif save_type == "pickle":
                 print(key, value.shape)
                 self.to_pkl(value, key)
+
+            elif save_type is None:
+                return 
                 
 
     def sort_item(self, data):
@@ -151,6 +154,7 @@ class SortStockData:
                 self.new_data.update({item_name: concat_data})
             except:
                 self.new_data[item_name] = item_data
+
 
     def sort_stock(self, data):
 
